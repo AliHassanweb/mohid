@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRecipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    
+</head>
+<body>
+    <!-- Form container for login and signup -->
+    <div id="auth-section" class="form-container">
+        <h2 class="form-title">QuickRecipe Finder</h2>
+
+        <!-- Login Form -->
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up here</a></p>
+        </form>
+
+        <!-- Signup Form (Hidden initially) -->
+        <form id="signup-form" class="hidden">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="username" required>
+
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="password" required>
+
+            <button type="submit">Sign Up</button>
+
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        </form>
+    </div>
+
+    <!-- Recipe Finder Section (Hidden initially) -->
+    <div id="recipe-finder" class="hidden">
+        <header>
+            <h1>Recipe Finder</h1>
+        </header>
+        <form>
+            <input type="text" id="search" placeholder="Enter ingredients">
+            <button type="button" id="submit" class="btn">Search</button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+    
+</body>
+</html>
